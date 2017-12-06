@@ -130,6 +130,7 @@ def play(episodes, benchmark, verbose=False):
 
 
 if __name__ == "__main__":
+
     episodes = 200
     benchmark = 1900
     nplays = 100
