@@ -11,7 +11,7 @@ from keras.optimizers import Adam
 
 class NeuralController(object):
 
-    def __init__(self, n_input, n_output, gamma=1.0, batch_size=10, model_instances=2):
+    def __init__(self, n_input, n_output, gamma=1.0, batch_size=10, model_instances=4):
         self.n_input = n_input
         self.n_output = n_output
         self.action_space = range(n_output)
@@ -132,8 +132,8 @@ def play(episodes, benchmark, verbose=False):
 if __name__ == "__main__":
 
     episodes = 200
-    benchmark = 1900
-    nplays = 100
+    benchmark = 2200
+    nplays = 40
     results = np.array([play(episodes, benchmark, verbose=False) for _ in range(nplays)])
     success = results < episodes
     print(

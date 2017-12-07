@@ -105,8 +105,8 @@ def play(episodes=100, benchmark=1900, verbose=False):
 if __name__ == '__main__':
 
     episodes = 200
-    benchmark = 1900
-    nplays = 100
+    benchmark = 2200
+    nplays = 40
     results = np.array([play(episodes, benchmark, verbose=False) for _ in range(nplays)])
     success = results < episodes
     print(
